@@ -1,6 +1,6 @@
 {
   "name": "stylelint-config-tld-base",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Default stylelint config used by Tommy Dunn.",
   "main": "css/index.js",
   "repository": {
