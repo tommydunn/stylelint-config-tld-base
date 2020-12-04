@@ -1,0 +1,38 @@
+name: Tests
+on: [push, pull_request]
+env:
+  CI: true
+
+jobs:
+  run:
+    name: Node ${{ matrix.node }}
+    runs-on: ubuntu-latest
+
+    strategy:
+      fail-fast: false
+      matrix:
+        node: [10, 12, 14]
+
+    steps:
+      - name: Clone repository
+        uses: actions/checkout@v2
+
+      - name: Clone tommydunn/tommydunn.io repository
+        uses: actions/checkout@v2
+        with:
+          repository: tommydunn/tommydunn.io
+          path: dist
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node }}
+
+      - name: Install npm dependencies
+        run: npm ci
+
+      - name: Run tests
+        run: npm test
+
+      - name: Test against my repo
+        run: npm run test-ci
