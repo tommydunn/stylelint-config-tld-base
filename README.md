@@ -1,4 +1,4 @@
-# stylelint-config-tld-base [![npm version](https://img.shields.io/npm/v/stylelint-config-tld-base.svg)](https://www.npmjs.com/package/stylelint-config-tld-base) [![Build Status](https://github.com/twbs/stylelint-config-tld-base/workflows/Tests/badge.svg)](https://github.com/twbs/stylelint-config-tld-base/actions?workflow=Tests)
+# stylelint-config-tld-base [![npm version](https://img.shields.io/npm/v/stylelint-config-tld-base.svg)](https://www.npmjs.com/package/stylelint-config-tld-base)
 
 Default stylelint config used by Tommy Dunn.
 
